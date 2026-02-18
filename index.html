@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delaunay / Voronoi Stippler</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <input id="file" type="file" accept="image/*" />
+
+        <label>
+          Points:
+          <input id="points" type="range" min="200" max="8000" step="100" value="2000" />
+          <span id="pointsValue">2000</span>
+        </label>
+
+        <label>
+          Mode:
+          <select id="mode">
+            <option value="dots">Dots</option>
+            <option value="delaunay">Delaunay</option>
+            <option value="voronoi">Voronoi</option>
+          </select>
+        </label>
+
+        <button id="download" disabled>Download PNG</button>
+      </header>
+
+      <main>
+        <canvas id="canvas"></canvas>
+      </main>
+
+      <footer>
+        <span id="status">Upload an image to start.</span>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
