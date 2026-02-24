@@ -197,10 +197,3 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 *If you find this project useful, consider leaving a ⭐ on the [repository](https://github.com/NHasan143/delaunay-stippler) — it helps a lot!*# Delaunay / Voronoi Stippler
 
-Upload an image → generate a stippled distribution of points using weighted Lloyd relaxation (d3-delaunay) in a Web Worker → render as dots, Delaunay triangulation, or Voronoi diagram.
-
-## Run locally
-
-```bash
-npm install
-npm run dev
