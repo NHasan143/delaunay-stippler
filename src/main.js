@@ -105,16 +105,15 @@ function render(points) {
 
   if (mode === "dots") {
     ctx.fillStyle = "#000";
-    ctx.beginPath();
-    for (let i = 0; i < points.length; i += 2) {
-      const x = points[i];
-      const y = points[i + 1];
-      ctx.moveTo(x + 1.5, y);
-      ctx.arc(x, y, 1.5, 0, Math.PI * 2);
-    }
-    ctx.fill();
-    return;
-  }
+for (let i = 0; i < points.length; i += 2) {
+  const x = points[i];
+  const y = points[i + 1];
+  ctx.beginPath();
+  ctx.arc(x, y, 1.6, 0, Math.PI * 2);
+  ctx.fill();
+}
+return;
+}
 
   // Delaunay/Voronoi render
   const delaunay = new Delaunay(points);
