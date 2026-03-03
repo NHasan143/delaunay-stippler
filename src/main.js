@@ -84,7 +84,7 @@ els.file.addEventListener("change", async (e) => {
   };
 
   const nPoints = Number(els.points.value);
-  worker.postMessage({ density, width, height, n: nPoints, iters: 80 });
+  worker.postMessage({ density, width, height, n: nPoints, iters: 120 });
 });
 
 function terminateWorker() {
