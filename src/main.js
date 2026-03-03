@@ -116,6 +116,7 @@ return;
 }
 
   // Delaunay/Voronoi render
+  ctx.imageSmoothingEnabled = true;
   const delaunay = new Delaunay(points);
   ctx.strokeStyle = "#000";
   ctx.lineWidth = 1;
