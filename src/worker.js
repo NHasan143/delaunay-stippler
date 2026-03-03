@@ -10,7 +10,7 @@ onmessage = (event) => {
   // Initialize via rejection sampling (biased by density map)
   for (let i = 0; i < n; i++) {
     let x = 0, y = 0;
-    for (let j = 0; j < 30; j++) {
+    for (let j = 0; j < 60; j++) {
       x = Math.floor(Math.random() * width);
       y = Math.floor(Math.random() * height);
       if (Math.random() < density[y * width + x]) break;
