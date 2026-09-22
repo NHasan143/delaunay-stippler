@@ -20,16 +20,44 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 16px;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px;
   background: white;
   border-radius: 10px;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 4px;
+  font-size: 12px;
+  color: #666;
 }
 
 label {
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  font-size: 14px;
+}
+
+label span {
+  min-width: 4ch;
+  color: #555;
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="range"] {
+  width: 110px;
 }
 
 main {
@@ -38,10 +66,13 @@ main {
   border-radius: 10px;
 }
 
+/* canvas is sized in js to 1 working px = 1 css px (dpr underneath).
+   max-width only lets it shrink on small screens, never stretch */
 canvas {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
   border-radius: 8px;
   background: #fff;
 }

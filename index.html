@@ -8,24 +8,64 @@
   <body>
     <div id="app">
       <header>
-        <input id="file" type="file" accept="image/*" />
+        <fieldset>
+          <legend>Image</legend>
+          <label for="file">Image</label>
+          <input id="file" type="file" accept="image/*" />
+          <label>
+            Points:
+            <input id="points" type="range" min="1000" max="30000" step="500" value="8000" />
+            <span id="pointsValue">8,000</span>
+          </label>
+          <button id="rerun" disabled>Re-run</button>
+        </fieldset>
 
-        <label>
-          Points:
-          <input id="points" type="range" min="200" max="12000" step="100" value="2000" />
-          <span id="pointsValue">2000</span>
-        </label>
+        <fieldset>
+          <legend>Tone</legend>
+          <label>
+            Gamma:
+            <input id="gamma" type="range" min="0.5" max="2.5" step="0.05" value="1.2" />
+            <span id="gammaValue">1.20</span>
+          </label>
+          <label>
+            White point:
+            <input id="white" type="range" min="0" max="0.6" step="0.01" value="0.15" />
+            <span id="whiteValue">0.15</span>
+          </label>
+          <label>
+            Detail:
+            <input id="detail" type="range" min="0" max="2" step="0.05" value="1" />
+            <span id="detailValue">1.00</span>
+          </label>
+        </fieldset>
 
-        <label>
-          Mode:
-          <select id="mode">
-            <option value="dots">Dots</option>
-            <option value="delaunay">Delaunay</option>
-            <option value="voronoi">Voronoi</option>
-          </select>
-        </label>
-
-        <button id="download" disabled>Download PNG</button>
+        <fieldset>
+          <legend>Render</legend>
+          <label>
+            Mode:
+            <select id="mode">
+              <option value="dots">Dots</option>
+              <option value="delaunay">Delaunay</option>
+              <option value="voronoi">Voronoi</option>
+              <option value="density">Density map</option>
+            </select>
+          </label>
+          <label>
+            Dot size:
+            <input id="dotSize" type="range" min="0.5" max="1.5" step="0.05" value="1" />
+            <span id="dotSizeValue">1.00</span>
+          </label>
+          <label>
+            Export:
+            <select id="exportScale">
+              <option value="1">1x</option>
+              <option value="2" selected>2x</option>
+              <option value="3">3x</option>
+              <option value="4">4x</option>
+            </select>
+          </label>
+          <button id="download" disabled>Download PNG</button>
+        </fieldset>
       </header>
 
       <main>
@@ -33,7 +73,7 @@
       </main>
 
       <footer>
-        <span id="status">Upload an image to start.</span>
+        <span id="status" aria-live="polite">Upload an image to start.</span>
       </footer>
     </div>
 
